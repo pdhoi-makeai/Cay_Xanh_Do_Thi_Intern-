@@ -31,9 +31,9 @@ Dự án quản lý và hiển thị thông tin cây xanh đô thị, kết hợ
 ## Hướng dẫn Cài đặt (Setup Guide)
 
 ### Yêu cầu hệ thống (Prerequisites)
-- **Node.js** (Phiên bản >= 18)
-- **Python** (Phiên bản >= 3.10)
-- **MariaDB / Redis** (Dành cho Frappe Backend)
+- **Node.js** (Phiên bản >= 22)
+- **Python** (Phiên bản >= 3.14)
+- **PostgreSQL / Redis** (Dành cho Frappe Backend)
 - **Frappe Bench CLI**
 
 ### 1. Cài đặt và chạy Frontend
