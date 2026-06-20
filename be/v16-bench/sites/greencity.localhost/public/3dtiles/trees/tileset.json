@@ -1,0 +1,22 @@
+{
+  "asset": {
+    "version": "1.0",
+    "tilesetVersion": "1.0.0"
+  },
+  "geometricError": 10000,
+  "root": {
+    "boundingVolume": {
+      "sphere": [
+        -1911562.0835321867,
+        5824961.450153612,
+        1753754.7081973855,
+        5000
+      ]
+    },
+    "geometricError": 0,
+    "refine": "REPLACE",
+    "content": {
+      "uri": "trees.i3dm"
+    }
+  }
+}

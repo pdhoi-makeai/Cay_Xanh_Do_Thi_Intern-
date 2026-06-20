@@ -1,0 +1,23 @@
+Killed
+Killed
+Killed
+Killed
+/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py:1602: DeprecationWarning: This process (pid=1287) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  child_pid = os.fork()
+2026-06-17 13:47:36,305 Worker 690bc58f767f4abb90f51e4a5b08795c: could not connect to Redis instance: Error 111 connecting to 127.0.0.1:11010. Connection refused. retrying in 2 seconds...
+/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py:1602: DeprecationWarning: This process (pid=1362) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  child_pid = os.fork()
+/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py:1602: DeprecationWarning: This process (pid=1362) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  child_pid = os.fork()
+/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py:1602: DeprecationWarning: This process (pid=1362) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  child_pid = os.fork()
+/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py:1602: DeprecationWarning: This process (pid=1362) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  child_pid = os.fork()
+/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py:1602: DeprecationWarning: This process (pid=1362) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  child_pid = os.fork()
+/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py:1602: DeprecationWarning: This process (pid=1362) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  child_pid = os.fork()
+/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py:1602: DeprecationWarning: This process (pid=1362) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  child_pid = os.fork()
+/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py:1602: DeprecationWarning: This process (pid=42416) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  child_pid = os.fork()

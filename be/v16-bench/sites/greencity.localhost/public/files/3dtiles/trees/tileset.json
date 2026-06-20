@@ -1,0 +1,96 @@
+{
+  "asset": {
+    "version": "1.0",
+    "tilesetVersion": "1.0.0"
+  },
+  "geometricError": 10000,
+  "root": {
+    "boundingVolume": {
+      "sphere": [
+        0,
+        0,
+        0,
+        6378137.0
+      ]
+    },
+    "geometricError": 1000,
+    "refine": "ADD",
+    "children": [
+      {
+        "boundingVolume": {
+          "sphere": [
+            -1909639.8683043753,
+            5825313.424243584,
+            1754673.9138785498,
+            5000
+          ]
+        },
+        "geometricError": 0,
+        "refine": "REPLACE",
+        "content": {
+          "uri": "trees_0.i3dm"
+        }
+      },
+      {
+        "boundingVolume": {
+          "sphere": [
+            -1909647.7078807645,
+            5825274.844661102,
+            1754792.6465098967,
+            5000
+          ]
+        },
+        "geometricError": 0,
+        "refine": "REPLACE",
+        "content": {
+          "uri": "trees_1.i3dm"
+        }
+      },
+      {
+        "boundingVolume": {
+          "sphere": [
+            -1911676.292413152,
+            5824897.370431625,
+            1753842.5003752203,
+            5000
+          ]
+        },
+        "geometricError": 0,
+        "refine": "REPLACE",
+        "content": {
+          "uri": "trees_2.i3dm"
+        }
+      },
+      {
+        "boundingVolume": {
+          "sphere": [
+            -1912605.8664161577,
+            5824832.453512667,
+            1753050.0981892033,
+            5000
+          ]
+        },
+        "geometricError": 0,
+        "refine": "REPLACE",
+        "content": {
+          "uri": "trees_3.i3dm"
+        }
+      },
+      {
+        "boundingVolume": {
+          "sphere": [
+            -1911405.1701003613,
+            5824998.219580828,
+            1753803.864200595,
+            5000
+          ]
+        },
+        "geometricError": 0,
+        "refine": "REPLACE",
+        "content": {
+          "uri": "trees_4.i3dm"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,492 @@
+2026-06-17 11:24:02,825 Worker 954cb3e219094c929e2fc874db30725a: started with PID 109512, version 2.6.1
+2026-06-17 11:24:02,825 Worker 954cb3e219094c929e2fc874db30725a: subscribing to channel rq:pubsub:954cb3e219094c929e2fc874db30725a
+2026-06-17 11:24:02,826 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:24:02,827 Worker 954cb3e219094c929e2fc874db30725a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:24:02,829 Worker 954cb3e219094c929e2fc874db30725a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:24:02,830 Worker 954cb3e219094c929e2fc874db30725a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 11:24:54,045 Worker dad8e4ad910c4f5ea7afa4261a28a4c9: started with PID 109706, version 2.6.1
+2026-06-17 11:24:54,045 Worker dad8e4ad910c4f5ea7afa4261a28a4c9: subscribing to channel rq:pubsub:dad8e4ad910c4f5ea7afa4261a28a4c9
+2026-06-17 11:24:54,046 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:24:54,046 Worker dad8e4ad910c4f5ea7afa4261a28a4c9: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:24:54,048 Worker dad8e4ad910c4f5ea7afa4261a28a4c9: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:24:54,049 Worker dad8e4ad910c4f5ea7afa4261a28a4c9: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 11:24:54,757 Worker dad8e4ad910c4f5ea7afa4261a28a4c9 [PID 109706]: warm shut down requested
+2026-06-17 11:24:54,758 Worker dad8e4ad910c4f5ea7afa4261a28a4c9: unsubscribing from channel rq:pubsub:dad8e4ad910c4f5ea7afa4261a28a4c9
+2026-06-17 11:25:54,654 Worker ebb5697307514621a5bab308a61a02ee: started with PID 110522, version 2.6.1
+2026-06-17 11:25:54,654 Worker ebb5697307514621a5bab308a61a02ee: subscribing to channel rq:pubsub:ebb5697307514621a5bab308a61a02ee
+2026-06-17 11:25:54,655 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:25:54,656 Worker ebb5697307514621a5bab308a61a02ee: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:25:54,657 Worker ebb5697307514621a5bab308a61a02ee: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:25:54,659 Worker ebb5697307514621a5bab308a61a02ee: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 11:30:10,408 Worker ebb5697307514621a5bab308a61a02ee [PID 110522]: warm shut down requested
+2026-06-17 11:30:10,417 Worker ebb5697307514621a5bab308a61a02ee: unsubscribing from channel rq:pubsub:ebb5697307514621a5bab308a61a02ee
+2026-06-17 11:30:13,122 Worker a6df94f45d464a16a4dccce3373fe261: started with PID 142748, version 2.6.1
+2026-06-17 11:30:13,122 Worker a6df94f45d464a16a4dccce3373fe261: subscribing to channel rq:pubsub:a6df94f45d464a16a4dccce3373fe261
+2026-06-17 11:30:13,123 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:30:13,124 Worker a6df94f45d464a16a4dccce3373fe261: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:30:13,124 Worker a6df94f45d464a16a4dccce3373fe261: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:30:13,125 Worker a6df94f45d464a16a4dccce3373fe261: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 11:40:52,074 Worker a8b8b97a818e4a169c14edc94a4a1978: started with PID 19889, version 2.6.1
+2026-06-17 11:40:52,074 Worker a8b8b97a818e4a169c14edc94a4a1978: subscribing to channel rq:pubsub:a8b8b97a818e4a169c14edc94a4a1978
+2026-06-17 11:40:52,075 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:40:52,076 Worker a8b8b97a818e4a169c14edc94a4a1978: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:40:52,077 Worker a8b8b97a818e4a169c14edc94a4a1978: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:40:52,079 Worker a8b8b97a818e4a169c14edc94a4a1978: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 11:44:18,333 Worker d535ca64d0854f84955a52e91a828c04: started with PID 59114, version 2.6.1
+2026-06-17 11:44:18,333 Worker d535ca64d0854f84955a52e91a828c04: subscribing to channel rq:pubsub:d535ca64d0854f84955a52e91a828c04
+2026-06-17 11:44:18,334 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:44:18,334 Worker d535ca64d0854f84955a52e91a828c04: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:44:18,336 Worker d535ca64d0854f84955a52e91a828c04: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:44:18,337 Worker d535ca64d0854f84955a52e91a828c04: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 11:44:43,428 Worker f571bb7ca38544aeab0565050c96b41f: started with PID 59274, version 2.6.1
+2026-06-17 11:44:43,428 Worker f571bb7ca38544aeab0565050c96b41f: subscribing to channel rq:pubsub:f571bb7ca38544aeab0565050c96b41f
+2026-06-17 11:44:43,428 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:44:43,429 Worker f571bb7ca38544aeab0565050c96b41f: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:44:43,430 Worker f571bb7ca38544aeab0565050c96b41f: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:44:43,433 Worker f571bb7ca38544aeab0565050c96b41f: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 11:46:28,873 Worker 56b2ea6eeead47519f3ddb58dd61cf6b: started with PID 59471, version 2.6.1
+2026-06-17 11:46:28,873 Worker 56b2ea6eeead47519f3ddb58dd61cf6b: subscribing to channel rq:pubsub:56b2ea6eeead47519f3ddb58dd61cf6b
+2026-06-17 11:46:28,874 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:46:28,874 Worker 56b2ea6eeead47519f3ddb58dd61cf6b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:46:28,876 Worker 56b2ea6eeead47519f3ddb58dd61cf6b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:46:28,876 Worker 56b2ea6eeead47519f3ddb58dd61cf6b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 11:56:00,090 Worker 4aaf0a0fc34e4067bcdbc4b5e925ab40: started with PID 83309, version 2.6.1
+2026-06-17 11:56:00,091 Worker 4aaf0a0fc34e4067bcdbc4b5e925ab40: subscribing to channel rq:pubsub:4aaf0a0fc34e4067bcdbc4b5e925ab40
+2026-06-17 11:56:00,092 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:56:00,093 Worker 4aaf0a0fc34e4067bcdbc4b5e925ab40: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:56:00,094 Worker 4aaf0a0fc34e4067bcdbc4b5e925ab40: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:56:00,096 Worker 4aaf0a0fc34e4067bcdbc4b5e925ab40: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 11:57:53,397 Worker 02fa1b5d9044480b8e70750c3afd19a0: started with PID 83690, version 2.6.1
+2026-06-17 11:57:53,398 Worker 02fa1b5d9044480b8e70750c3afd19a0: subscribing to channel rq:pubsub:02fa1b5d9044480b8e70750c3afd19a0
+2026-06-17 11:57:53,399 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 11:57:53,399 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 11:57:53,401 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 11:57:53,402 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 12:11:23,557 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 12:11:23,606 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 12:11:23,611 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 12:24:53,732 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 12:24:53,747 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 12:24:53,750 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 12:38:23,832 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 12:38:23,839 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 12:38:23,841 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 12:51:53,995 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 12:51:54,009 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 12:51:54,014 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 13:05:24,070 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 13:05:24,073 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 13:05:24,075 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 13:18:54,158 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 13:18:54,171 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 13:18:54,184 Worker 02fa1b5d9044480b8e70750c3afd19a0: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 13:29:09,639 Worker 728cb684903f47c1923456d344d575ae: started with PID 2094, version 2.6.1
+2026-06-17 13:29:09,640 Worker 728cb684903f47c1923456d344d575ae: subscribing to channel rq:pubsub:728cb684903f47c1923456d344d575ae
+2026-06-17 13:29:09,641 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 13:29:09,641 Worker 728cb684903f47c1923456d344d575ae: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 13:29:09,643 Worker 728cb684903f47c1923456d344d575ae: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 13:29:09,644 Worker 728cb684903f47c1923456d344d575ae: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 13:30:32,492 Worker 6478b98ae2394cdd996a3fe2abae9547: started with PID 1264, version 2.6.1
+2026-06-17 13:30:32,492 Worker 6478b98ae2394cdd996a3fe2abae9547: subscribing to channel rq:pubsub:6478b98ae2394cdd996a3fe2abae9547
+2026-06-17 13:30:32,494 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 13:30:32,494 Worker 6478b98ae2394cdd996a3fe2abae9547: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 13:30:32,496 Worker 6478b98ae2394cdd996a3fe2abae9547: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 13:30:32,498 Worker 6478b98ae2394cdd996a3fe2abae9547: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 13:31:56,371 Worker 690bc58f767f4abb90f51e4a5b08795c: started with PID 1287, version 2.6.1
+2026-06-17 13:31:56,372 Worker 690bc58f767f4abb90f51e4a5b08795c: subscribing to channel rq:pubsub:690bc58f767f4abb90f51e4a5b08795c
+2026-06-17 13:31:56,373 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 13:31:56,373 Worker 690bc58f767f4abb90f51e4a5b08795c: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 13:31:56,375 Worker 690bc58f767f4abb90f51e4a5b08795c: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 13:31:56,377 Worker 690bc58f767f4abb90f51e4a5b08795c: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 13:37:04,452 home-user-cay_xanh_do_thi-be-v16-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: doctype=User quanlydancu@huongtra.local>, 'ignore_mandatory..., method='frappe.core.doctype.user.user.create_contact', site='greencity.localhost', user='Administrator') (greencity.localhost||a96c2259-3a4e-4537-9c68-03e49a2528f1)
+2026-06-17 13:37:05,323 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: doctype=User quanlydancu@huongtra.local>, 'ignore_mandatory..., method='frappe.core.doctype.user.user.create_contact', site='greencity.localhost', user='Administrator') job in 0:00:00.725254s on worker 690bc58f767f4abb90f51e4a5b08795c
+2026-06-17 13:37:05,323 home-user-cay_xanh_do_thi-be-v16-bench:default: Job OK (greencity.localhost||a96c2259-3a4e-4537-9c68-03e49a2528f1)
+2026-06-17 13:37:05,323 Result is kept for 600 seconds
+2026-06-17 13:43:50,376 Worker 690bc58f767f4abb90f51e4a5b08795c: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 13:43:50,378 Worker 690bc58f767f4abb90f51e4a5b08795c: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 13:43:50,379 Worker 690bc58f767f4abb90f51e4a5b08795c: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 13:47:36,262 Worker 690bc58f767f4abb90f51e4a5b08795c [PID 1287]: warm shut down requested
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/connection.py", line 1133, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/_parsers/hiredis.py", line 163, in read_response
+    self.read_from_socket()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/_parsers/hiredis.py", line 110, in read_from_socket
+    bufflen = self._sock.recv_into(self._buffer)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/bench_helper.py", line 48, in invoke
+    return super().invoke(ctx)
+           ~~~~~~~~~~~~~~^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/click/core.py", line 1902, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/click/core.py", line 1298, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/click/core.py", line 853, in invoke
+    return callback(*args, **kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+    ~~~~~~~~~~~~^
+    	queue,
+     ^^^^^^
+    ...<4 lines>...
+    	strategy=strategy,
+     ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/background_jobs.py", line 353, in start_worker
+    worker.work(
+    ~~~~~~~~~~~^
+    	logging_level=logging_level,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	with_scheduler=False,
+     ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 631, in work
+    self.teardown()
+    ~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1150, in teardown
+    self.register_death()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 885, in register_death
+    p.execute()
+    ~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/client.py", line 1687, in execute
+    conn = self.connection_pool.get_connection()
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/utils.py", line 196, in wrapper
+    return func(*args, **kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/connection.py", line 2603, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/connection.py", line 846, in connect
+    self.connect_check_health(check_health=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/connection.py", line 869, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/connection.py", line 994, in on_connect_check_health
+    self.read_response()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/env/lib/python3.14/site-packages/redis/connection.py", line 1141, in read_response
+    raise ConnectionError(f"Error while reading from {host_error} : {e.args}")
+redis.exceptions.ConnectionError: Error while reading from 127.0.0.1:11010 : (104, 'Connection reset by peer')
+
+Error while reading from 127.0.0.1:11010 : (104, 'Connection reset by peer')
+2026-06-17 13:47:38,924 Worker 21b54d63634944f2a4c442acb973e047: started with PID 72788, version 2.6.1
+2026-06-17 13:47:38,924 Worker 21b54d63634944f2a4c442acb973e047: subscribing to channel rq:pubsub:21b54d63634944f2a4c442acb973e047
+2026-06-17 13:47:38,925 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 13:47:38,926 Worker 21b54d63634944f2a4c442acb973e047: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 13:47:38,927 Worker 21b54d63634944f2a4c442acb973e047: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 13:47:38,928 Worker 21b54d63634944f2a4c442acb973e047: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 14:16:00,819 Worker 461f43a0c6184ae791912134c11ea636: started with PID 17709, version 2.6.1
+2026-06-17 14:16:00,819 Worker 461f43a0c6184ae791912134c11ea636: subscribing to channel rq:pubsub:461f43a0c6184ae791912134c11ea636
+2026-06-17 14:16:00,820 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 14:16:00,821 Worker 461f43a0c6184ae791912134c11ea636: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 14:16:00,822 Worker 461f43a0c6184ae791912134c11ea636: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 14:16:00,823 Worker 461f43a0c6184ae791912134c11ea636: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 14:20:24,319 Worker 461f43a0c6184ae791912134c11ea636 [PID 17709]: warm shut down requested
+2026-06-17 14:20:24,320 Worker 461f43a0c6184ae791912134c11ea636: unsubscribing from channel rq:pubsub:461f43a0c6184ae791912134c11ea636
+2026-06-17 14:20:27,129 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: started with PID 31033, version 2.6.1
+2026-06-17 14:20:27,129 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: subscribing to channel rq:pubsub:7cdf35e7af6043b496346e8c9cb1a5e4
+2026-06-17 14:20:27,129 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 14:20:27,130 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 14:20:27,131 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 14:20:27,133 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 14:33:57,280 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 14:33:57,327 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 14:33:57,332 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 14:47:27,447 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 14:47:27,456 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 14:47:27,458 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 15:00:57,612 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 15:00:57,628 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 15:00:57,631 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 15:14:27,816 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 15:14:27,829 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 15:14:27,833 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 15:27:57,979 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 15:27:57,984 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 15:27:57,987 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 15:41:28,067 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 15:41:28,086 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 15:41:28,092 Worker 7cdf35e7af6043b496346e8c9cb1a5e4: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 16:18:30,722 Worker 1600e315bb9f4ae6ab0044df8e46f85a: started with PID 1098, version 2.6.1
+2026-06-17 16:18:30,722 Worker 1600e315bb9f4ae6ab0044df8e46f85a: subscribing to channel rq:pubsub:1600e315bb9f4ae6ab0044df8e46f85a
+2026-06-17 16:18:30,724 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-17 16:18:30,724 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 16:18:30,726 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 16:18:30,727 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 16:32:00,804 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 16:32:00,814 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 16:32:00,815 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 16:45:30,854 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 16:45:30,864 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 16:45:30,865 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 16:59:00,942 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 16:59:00,949 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 16:59:00,950 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 17:12:31,039 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 17:12:31,047 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 17:12:31,048 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-17 17:26:01,149 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-17 17:26:01,157 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-17 17:26:01,158 Worker 1600e315bb9f4ae6ab0044df8e46f85a: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 08:18:43,426 Worker 81b1b685e78143bdb707294a2df807dc: started with PID 1362, version 2.6.1
+2026-06-18 08:18:43,427 Worker 81b1b685e78143bdb707294a2df807dc: subscribing to channel rq:pubsub:81b1b685e78143bdb707294a2df807dc
+2026-06-18 08:18:43,428 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-18 08:18:43,429 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 08:18:43,431 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 08:18:43,433 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 08:32:13,544 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 08:32:13,552 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 08:32:13,554 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 08:45:43,692 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 08:45:43,701 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 08:45:43,702 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 08:59:13,747 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 08:59:13,758 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 08:59:13,759 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 09:12:43,953 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 09:12:43,956 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 09:12:43,958 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 09:26:13,995 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 09:26:14,015 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 09:26:14,020 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 09:39:44,204 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 09:39:44,211 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 09:39:44,213 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 09:53:14,322 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 09:53:14,325 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 09:53:14,327 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 09:54:28,398 home-user-cay_xanh_do_thi-be-v16-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146062-10'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') (greencity.localhost||0ff1391b-9d3b-4b25-a20a-0b784b017831)
+2026-06-18 09:54:29,715 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146062-10'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') job in 0:00:01.055090s on worker 81b1b685e78143bdb707294a2df807dc
+2026-06-18 09:54:29,715 home-user-cay_xanh_do_thi-be-v16-bench:default: Job OK (greencity.localhost||0ff1391b-9d3b-4b25-a20a-0b784b017831)
+2026-06-18 09:54:29,715 Result is kept for 600 seconds
+2026-06-18 09:54:31,970 home-user-cay_xanh_do_thi-be-v16-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146060-5'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') (greencity.localhost||f43267b6-d58c-42a3-9bec-ffe6197778b2)
+2026-06-18 09:54:32,431 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146060-5'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') job in 0:00:00.449609s on worker 81b1b685e78143bdb707294a2df807dc
+2026-06-18 09:54:32,431 home-user-cay_xanh_do_thi-be-v16-bench:default: Job OK (greencity.localhost||f43267b6-d58c-42a3-9bec-ffe6197778b2)
+2026-06-18 09:54:32,431 Result is kept for 600 seconds
+2026-06-18 09:54:35,149 home-user-cay_xanh_do_thi-be-v16-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146060-6'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') (greencity.localhost||2401075f-c890-4a8d-9aff-dbe3025a8dd3)
+2026-06-18 09:54:35,555 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146060-6'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') job in 0:00:00.399892s on worker 81b1b685e78143bdb707294a2df807dc
+2026-06-18 09:54:35,556 home-user-cay_xanh_do_thi-be-v16-bench:default: Job OK (greencity.localhost||2401075f-c890-4a8d-9aff-dbe3025a8dd3)
+2026-06-18 09:54:35,556 Result is kept for 600 seconds
+2026-06-18 09:54:37,887 home-user-cay_xanh_do_thi-be-v16-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146059-4'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') (greencity.localhost||5313744b-0197-4404-b539-4c53108bf7bc)
+2026-06-18 09:54:38,322 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146059-4'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') job in 0:00:00.427525s on worker 81b1b685e78143bdb707294a2df807dc
+2026-06-18 09:54:38,322 home-user-cay_xanh_do_thi-be-v16-bench:default: Job OK (greencity.localhost||5313744b-0197-4404-b539-4c53108bf7bc)
+2026-06-18 09:54:38,322 Result is kept for 600 seconds
+2026-06-18 09:54:41,290 home-user-cay_xanh_do_thi-be-v16-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146058-1'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') (greencity.localhost||b03e93e7-20b3-4b0a-acb0-e76997c3f86a)
+2026-06-18 09:54:41,727 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146058-1'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') job in 0:00:00.428850s on worker 81b1b685e78143bdb707294a2df807dc
+2026-06-18 09:54:41,728 home-user-cay_xanh_do_thi-be-v16-bench:default: Job OK (greencity.localhost||b03e93e7-20b3-4b0a-acb0-e76997c3f86a)
+2026-06-18 09:54:41,728 Result is kept for 600 seconds
+2026-06-18 09:54:50,104 home-user-cay_xanh_do_thi-be-v16-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146059-3'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') (greencity.localhost||235cca92-ca51-47ce-8a10-860f5f1b8dcd)
+2026-06-18 09:54:50,518 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781751146059-3'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') job in 0:00:00.407298s on worker 81b1b685e78143bdb707294a2df807dc
+2026-06-18 09:54:50,519 home-user-cay_xanh_do_thi-be-v16-bench:default: Job OK (greencity.localhost||235cca92-ca51-47ce-8a10-860f5f1b8dcd)
+2026-06-18 09:54:50,519 Result is kept for 600 seconds
+2026-06-18 09:56:20,072 home-user-cay_xanh_do_thi-be-v16-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781690913441-4'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') (greencity.localhost||0f0d1a89-103f-4c10-9c7e-d771f1b218e0)
+2026-06-18 09:56:20,918 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781690913441-4'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') job in 0:00:00.832923s on worker 81b1b685e78143bdb707294a2df807dc
+2026-06-18 09:56:20,918 home-user-cay_xanh_do_thi-be-v16-bench:default: Job OK (greencity.localhost||0f0d1a89-103f-4c10-9c7e-d771f1b218e0)
+2026-06-18 09:56:20,918 Result is kept for 600 seconds
+2026-06-18 10:09:51,018 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 10:09:51,026 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 10:09:51,027 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 10:23:21,137 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 10:23:21,140 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 10:23:21,142 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 10:36:51,316 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 10:36:51,325 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 10:36:51,326 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 10:50:21,415 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 10:50:21,426 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 10:50:21,428 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 11:03:51,550 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 11:03:51,558 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 11:03:51,559 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 11:17:21,653 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 11:17:21,662 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 11:17:21,663 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 11:30:51,695 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 11:30:51,712 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 11:30:51,714 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 11:44:21,844 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 11:44:21,849 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 11:44:21,851 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 11:57:51,973 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 11:57:51,983 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 11:57:51,984 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 12:11:22,073 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 12:11:22,081 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 12:11:22,082 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 12:24:52,275 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 12:24:52,276 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 12:24:52,277 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 12:38:22,372 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 12:38:22,374 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 12:38:22,376 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 12:51:52,502 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 12:51:52,504 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 12:51:52,505 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 13:05:22,686 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 13:05:22,688 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 13:05:22,690 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 13:18:52,794 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 13:18:52,796 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 13:18:52,798 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 13:32:22,959 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 13:32:22,960 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 13:32:22,961 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 13:45:53,139 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 13:45:53,146 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 13:45:53,147 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 13:59:23,276 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 13:59:23,286 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 13:59:23,288 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 14:12:53,313 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 14:12:53,316 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 14:12:53,317 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 14:26:23,377 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 14:26:23,381 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 14:26:23,383 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 14:39:53,491 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 14:39:53,498 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 14:39:53,498 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 14:53:23,606 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 14:53:23,612 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 14:53:23,616 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 15:06:53,706 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 15:06:53,714 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 15:06:53,715 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 15:20:23,875 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 15:20:23,884 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 15:20:23,885 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 15:33:53,947 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 15:33:53,955 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 15:33:53,956 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 15:47:24,045 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 15:47:24,046 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 15:47:24,047 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 16:00:54,202 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 16:00:54,212 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 16:00:54,213 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 16:14:24,332 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 16:14:24,342 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 16:14:24,343 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 16:27:54,478 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 16:27:54,486 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 16:27:54,487 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-18 16:41:24,591 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-18 16:41:24,593 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-18 16:41:24,594 Worker 81b1b685e78143bdb707294a2df807dc: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 10:02:53,305 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: started with PID 42416, version 2.6.1
+2026-06-19 10:02:53,306 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: subscribing to channel rq:pubsub:7120711bdc354d1fa1bd4fe04dea4f0b
+2026-06-19 10:02:53,307 *** Listening on home-user-cay_xanh_do_thi-be-v16-bench:short, home-user-cay_xanh_do_thi-be-v16-bench:default, home-user-cay_xanh_do_thi-be-v16-bench:long...
+2026-06-19 10:02:53,308 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 10:02:53,310 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 10:02:53,311 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 10:16:23,427 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 10:16:23,440 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 10:16:23,442 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 10:29:53,572 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 10:29:53,581 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 10:29:53,583 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 10:43:23,703 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 10:43:23,714 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 10:43:23,716 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 10:56:53,849 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 10:56:53,851 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 10:56:53,855 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 11:10:23,936 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 11:10:23,947 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 11:10:23,948 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 11:23:54,105 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 11:23:54,118 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 11:23:54,122 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 11:37:24,236 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 11:37:24,247 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 11:37:24,249 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 11:50:54,370 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 11:50:54,380 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 11:50:54,382 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 12:04:24,521 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 12:04:24,530 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 12:04:24,532 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 12:17:54,627 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 12:17:54,637 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 12:17:54,638 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 12:31:24,786 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 12:31:24,789 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 12:31:24,791 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 12:44:54,954 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 12:44:54,956 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 12:44:54,957 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 12:58:25,040 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 12:58:25,042 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 12:58:25,043 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 13:11:55,129 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 13:11:55,131 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 13:11:55,132 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 13:25:25,295 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 13:25:25,297 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 13:25:25,299 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 13:38:55,458 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 13:38:55,468 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 13:38:55,469 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 13:50:54,936 home-user-cay_xanh_do_thi-be-v16-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781746583582-1'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') (greencity.localhost||511c2863-7f42-4e5c-a624-a39061a724ad)
+2026-06-19 13:50:56,234 Successfully completed frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Tai Nguyen Ha Tang', 'name': 'CX-ROW-1781746583582-1'}, method='frappe.model.delete_doc.delete_dynamic_links', site='greencity.localhost', user='Administrator') job in 0:00:00.924988s on worker 7120711bdc354d1fa1bd4fe04dea4f0b
+2026-06-19 13:50:56,234 home-user-cay_xanh_do_thi-be-v16-bench:default: Job OK (greencity.localhost||511c2863-7f42-4e5c-a624-a39061a724ad)
+2026-06-19 13:50:56,234 Result is kept for 600 seconds
+2026-06-19 13:50:56,239 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 13:50:56,241 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 13:50:56,242 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 14:04:26,331 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 14:04:26,346 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 14:04:26,347 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 14:17:56,465 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 14:17:56,484 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 14:17:56,489 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 14:31:26,648 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 14:31:26,661 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 14:31:26,662 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 14:44:56,739 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 14:44:56,746 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 14:44:56,747 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 14:58:26,824 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 14:58:26,830 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 14:58:26,831 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 15:11:56,898 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 15:11:56,911 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 15:11:56,914 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 15:25:26,937 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 15:25:26,944 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 15:25:26,945 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 15:38:57,026 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 15:38:57,030 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 15:38:57,032 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 15:52:27,155 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 15:52:27,157 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 15:52:27,158 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 16:05:57,222 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 16:05:57,230 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 16:05:57,232 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 16:19:27,306 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 16:19:27,315 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 16:19:27,317 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 16:32:57,433 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 16:32:57,440 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 16:32:57,441 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 16:46:27,564 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 16:46:27,580 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 16:46:27,581 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 16:59:57,686 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 16:59:57,694 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 16:59:57,695 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long
+2026-06-19 17:13:27,768 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:short
+2026-06-19 17:13:27,776 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:default
+2026-06-19 17:13:27,777 Worker 7120711bdc354d1fa1bd4fe04dea4f0b: cleaning registries for queue: home-user-cay_xanh_do_thi-be-v16-bench:long

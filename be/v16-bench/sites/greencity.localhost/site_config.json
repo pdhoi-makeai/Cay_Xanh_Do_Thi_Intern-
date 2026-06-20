@@ -1,0 +1,17 @@
+{
+ "allow_cors": [
+  "http://localhost:5183",
+  "http://127.0.0.1:5183"
+ ],
+ "db_name": "_94bd042fe24aedec",
+ "db_password": "K3zTXZtvG00uayVB",
+ "db_type": "postgres",
+ "db_user": "_94bd042fe24aedec",
+ "developer_mode": 1,
+ "installed_apps": [
+  "frappe",
+  "cay_xanh_do_thi",
+  "smart_city"
+ ],
+ "use_openstreetmap": true
+}

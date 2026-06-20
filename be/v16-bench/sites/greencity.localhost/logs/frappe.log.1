@@ -1,0 +1,1617 @@
+2026-06-17 11:30:00,390 ERROR frappe Could not take error snapshot: current transaction is aborted, commands ignored until end of transaction block
+
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 206, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 238, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 293, in start
+    ).run()
+      ~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 125, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 64, in log_error
+    error_log = frappe.get_doc(
+    	doctype="Error Log",
+    ...<5 lines>...
+    	metadata=metadata,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/utils/__init__.py", line 224, in wrapper
+    return func(*args, **kw)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 130, in get_doc
+    return get_doc_from_dict(kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 159, in get_doc_from_dict
+    if controller := get_controller(data["doctype"]):
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 680, in get_values
+    out = query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-17 11:30:00,410 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'frappe.auth.get_logged_user'}
+2026-06-17 11:30:00,438 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'frappe.auth.get_logged_user'}
+2026-06-17 11:30:01,543 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+2026-06-17 11:30:02,104 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:30:02,105 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:30:02,106 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:02,347 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:30:02,477 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:30:02,478 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:16,741 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:17,057 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:18,248 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:18,259 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:30:18,264 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:30:18,499 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:18,587 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:30:18,590 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:30:21,068 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:21,397 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:21,996 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:21,998 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:30:21,998 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:30:22,225 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:22,372 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:30:22,380 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:30:22,554 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:22,883 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:24,432 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:30:24,740 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:24,741 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:30:24,754 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:30:25,068 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:30:25,073 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:32:50,636 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:32:50,892 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:32:51,292 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:32:51,590 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:32:51,619 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:32:51,626 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:32:51,911 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:32:51,940 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:34:59,740 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:34:59,997 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:00,073 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:35:00,272 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:00,274 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:35:00,326 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:35:00,404 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:00,595 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:00,597 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:35:00,775 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:00,919 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:35:01,185 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:35:01,188 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:01,191 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:35:01,239 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:35:01,505 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:01,526 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:01,849 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:02,381 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:35:02,383 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:35:02,385 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:35:02,618 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:35:02,727 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:35:02,727 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:46:40,045 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:46:40,255 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:46:40,255 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:46:40,366 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:46:40,583 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:46:40,584 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:46:41,255 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:46:41,536 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:46:41,673 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:46:41,978 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:46:41,979 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:46:41,994 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:46:42,308 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:46:42,308 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:46:42,627 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:46:42,948 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:53:01,872 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:53:02,176 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:56:29,229 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'cay_xanh_do_thi.cay_xanh_do_thi.api.get_power_dashboard_data'}
+2026-06-17 11:56:32,664 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'cay_xanh_do_thi.api.get_power_dashboard_data'}
+2026-06-17 11:57:02,784 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'cay_xanh_do_thi.api.get_power_dashboard_data'}
+2026-06-17 11:58:02,624 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:02,626 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:02,628 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:02,649 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:02,970 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:02,971 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:02,982 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:03,299 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:03,301 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:03,316 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:03,642 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:03,643 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:03,648 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:03,977 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:03,984 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:03,987 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:04,318 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:04,319 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:04,323 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:04,666 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:04,684 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:04,693 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:05,023 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:05,027 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:06,285 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:06,290 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:06,298 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:06,539 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:06,605 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:06,620 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:08,616 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:08,996 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'khu_vuc': 'KV-HKB', 'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:09,004 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'khu_vuc': 'KV-HKB', 'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:10,199 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:10,216 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'khu_vuc': 'KV-HKB', 'trang_thai': 'Tốt', 'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:10,218 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'khu_vuc': 'KV-HKB', 'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:11,451 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:11,752 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'khu_vuc': 'KV-HKB', 'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:11,755 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'khu_vuc': 'KV-HKB', 'trang_thai': 'Tốt', 'loai_cay': 'Bàng đài loan', 'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:12,655 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:12,660 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:12,665 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:12,917 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:12,980 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:12,997 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:13,293 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:13,610 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:13,617 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:13,619 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:13,943 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:13,943 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:34,340 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:34,346 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:34,356 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:34,604 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:34,664 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:34,700 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:37,183 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:37,528 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:37,544 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:37,556 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:37,850 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:37,871 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:38,789 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:38,805 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:38,813 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:39,066 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:39,121 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:39,134 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:39,148 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:39,476 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:40,042 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:40,049 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:40,056 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:40,301 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:40,377 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:40,377 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:40,727 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:41,032 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:41,035 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:41,051 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:41,377 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:41,377 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:42,377 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:42,399 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:42,400 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 11:58:42,642 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 11:58:42,725 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 11:58:42,729 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:01:25,163 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:01:25,164 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:01:25,465 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:01:25,504 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:01:25,504 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:01:25,782 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:05:00,496 ERROR frappe Could not take error snapshot: current transaction is aborted, commands ignored until end of transaction block
+
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 206, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 238, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 293, in start
+    ).run()
+      ~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 125, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 64, in log_error
+    error_log = frappe.get_doc(
+    	doctype="Error Log",
+    ...<5 lines>...
+    	metadata=metadata,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/utils/__init__.py", line 224, in wrapper
+    return func(*args, **kw)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 130, in get_doc
+    return get_doc_from_dict(kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 159, in get_doc_from_dict
+    if controller := get_controller(data["doctype"]):
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 680, in get_values
+    out = query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-17 12:05:00,713 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:05:00,736 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:05:03,866 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:05:04,241 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:05:06,632 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:05:06,634 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:06,634 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:05:06,869 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:06,962 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:05:06,965 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:05:31,343 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:05:31,419 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'cay_xanh_do_thi.api.get_map_data'}
+2026-06-17 12:05:31,604 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:05:32,597 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:05:32,910 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:05:32,917 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:32,942 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:05:33,299 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:05:33,301 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:33,980 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:05:34,285 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:05:34,289 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:34,310 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:05:34,614 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:34,616 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:05:36,032 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:36,264 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:36,619 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:05:36,951 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:36,965 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:05:36,976 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_dashboard'}
+2026-06-17 12:05:37,290 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:05:37,304 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.smart_city.services.urban_tree_service.get_tree_routes'}
+2026-06-17 12:05:38,887 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:05:38,912 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:19:48,251 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'smart_city.services.urban_tree_service.get_tree_map'}
+2026-06-17 12:22:05,251 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:22:05,275 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:22:08,421 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:22:08,750 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:22:46,586 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:22:46,781 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:22:47,407 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:22:47,787 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:25:00,591 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'frappe.auth.get_logged_user'}
+2026-06-17 12:25:00,616 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'frappe.auth.get_logged_user'}
+2026-06-17 12:25:00,623 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+2026-06-17 12:25:01,133 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+2026-06-17 12:25:01,949 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:25:02,117 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:25:28,253 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:25:28,289 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:25:34,378 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:25:56,868 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 12:25:56,901 ERROR frappe New Exception collected in error log
+Site: greencity.localhost
+Form Dict: {'from_date': '2026-05-18', 'to_date': '2026-06-17', 'cmd': 'cay_xanh_do_thi.api.get_tree_dashboard_data'}
+2026-06-17 14:20:31,538 ERROR frappe Could not take error snapshot: current transaction is aborted, commands ignored until end of transaction block
+
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 206, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 238, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 293, in start
+    ).run()
+      ~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 125, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 64, in log_error
+    error_log = frappe.get_doc(
+    	doctype="Error Log",
+    ...<5 lines>...
+    	metadata=metadata,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/utils/__init__.py", line 224, in wrapper
+    return func(*args, **kw)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 130, in get_doc
+    return get_doc_from_dict(kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 159, in get_doc_from_dict
+    if controller := get_controller(data["doctype"]):
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 680, in get_values
+    out = query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-17 14:21:04,733 ERROR frappe Could not take error snapshot: current transaction is aborted, commands ignored until end of transaction block
+
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 206, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 238, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 293, in start
+    ).run()
+      ~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 125, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 64, in log_error
+    error_log = frappe.get_doc(
+    	doctype="Error Log",
+    ...<5 lines>...
+    	metadata=metadata,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/utils/__init__.py", line 224, in wrapper
+    return func(*args, **kw)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 130, in get_doc
+    return get_doc_from_dict(kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 159, in get_doc_from_dict
+    if controller := get_controller(data["doctype"]):
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 680, in get_values
+    out = query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-17 14:22:36,383 ERROR frappe Could not take error snapshot: current transaction is aborted, commands ignored until end of transaction block
+
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 206, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 238, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 293, in start
+    ).run()
+      ~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 125, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 64, in log_error
+    error_log = frappe.get_doc(
+    	doctype="Error Log",
+    ...<5 lines>...
+    	metadata=metadata,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/utils/__init__.py", line 224, in wrapper
+    return func(*args, **kw)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 130, in get_doc
+    return get_doc_from_dict(kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 159, in get_doc_from_dict
+    if controller := get_controller(data["doctype"]):
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 680, in get_values
+    out = query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-17 14:22:36,387 ERROR frappe Could not take error snapshot: current transaction is aborted, commands ignored until end of transaction block
+
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 206, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 238, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 293, in start
+    ).run()
+      ~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 125, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 64, in log_error
+    error_log = frappe.get_doc(
+    	doctype="Error Log",
+    ...<5 lines>...
+    	metadata=metadata,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/utils/__init__.py", line 224, in wrapper
+    return func(*args, **kw)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 130, in get_doc
+    return get_doc_from_dict(kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 159, in get_doc_from_dict
+    if controller := get_controller(data["doctype"]):
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 680, in get_values
+    out = query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-17 14:25:00,979 ERROR frappe Could not take error snapshot: current transaction is aborted, commands ignored until end of transaction block
+
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 206, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 238, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 293, in start
+    ).run()
+      ~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 125, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 64, in log_error
+    error_log = frappe.get_doc(
+    	doctype="Error Log",
+    ...<5 lines>...
+    	metadata=metadata,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/utils/__init__.py", line 224, in wrapper
+    return func(*args, **kw)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 130, in get_doc
+    return get_doc_from_dict(kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 159, in get_doc_from_dict
+    if controller := get_controller(data["doctype"]):
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 680, in get_values
+    out = query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-17 14:29:49,742 ERROR frappe Could not take error snapshot: current transaction is aborted, commands ignored until end of transaction block
+
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 206, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 238, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 293, in start
+    ).run()
+      ~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 125, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 64, in log_error
+    error_log = frappe.get_doc(
+    	doctype="Error Log",
+    ...<5 lines>...
+    	metadata=metadata,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/utils/__init__.py", line 224, in wrapper
+    return func(*args, **kw)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 130, in get_doc
+    return get_doc_from_dict(kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 159, in get_doc_from_dict
+    if controller := get_controller(data["doctype"]):
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 680, in get_values
+    out = query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-17 14:31:13,613 ERROR frappe Could not take error snapshot: current transaction is aborted, commands ignored until end of transaction block
+
+Site: greencity.localhost
+Form Dict: {'usr': 'Administrator'}
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/app.py", line 206, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 238, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/sessions.py", line 293, in start
+    ).run()
+      ~~~^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 125, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/utils/error.py", line 64, in log_error
+    error_log = frappe.get_doc(
+    	doctype="Error Log",
+    ...<5 lines>...
+    	metadata=metadata,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/utils/__init__.py", line 224, in wrapper
+    return func(*args, **kw)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 130, in get_doc
+    return get_doc_from_dict(kwargs)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/document.py", line 159, in get_doc_from_dict
+    if controller := get_controller(data["doctype"]):
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 680, in get_values
+    out = query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/postgres/database.py", line 234, in sql
+    return super().sql(modify_query(query), modify_values(values), *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/user/cay_xanh_do_thi/be/v16-bench/apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+

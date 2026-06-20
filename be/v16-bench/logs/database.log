@@ -1,0 +1,628 @@
+2026-06-17 10:57:25,736 WARNING database DDL Query made to DB:
+create table "tabAddress" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"address_title" varchar(140),
+"address_type" varchar(140),
+"address_line1" varchar(240),
+"address_line2" varchar(240),
+"city" varchar(140),
+"county" varchar(140),
+"state" varchar(140),
+"country" varchar(140),
+"pincode" varchar(140),
+"email_id" varchar(140),
+"phone" varchar(140),
+"fax" varchar(140),
+"is_primary_address" smallint NOT NULL DEFAULT 0,
+"is_shipping_address" smallint NOT NULL DEFAULT 0,
+"disabled" smallint NOT NULL DEFAULT 0,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:57:25,737 WARNING database DDL Query made to DB:
+CREATE INDEX IF NOT EXISTS "city" ON "tabAddress"("city");CREATE INDEX IF NOT EXISTS "country" ON "tabAddress"("country");CREATE INDEX IF NOT EXISTS "pincode" ON "tabAddress"("pincode");
+2026-06-17 10:57:25,843 WARNING database DDL Query made to DB:
+create table "tabContact Phone" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"phone" varchar(140),
+"is_primary_phone" smallint NOT NULL DEFAULT 0,
+"is_primary_mobile_no" smallint NOT NULL DEFAULT 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140)
+			)
+2026-06-17 10:57:25,932 WARNING database DDL Query made to DB:
+create table "tabContact Email" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"email_id" varchar(140),
+"is_primary" smallint NOT NULL DEFAULT 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140)
+			)
+2026-06-17 10:57:25,975 WARNING database DDL Query made to DB:
+create table "tabAddress Template" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"country" varchar(140) UNIQUE,
+"is_default" smallint NOT NULL DEFAULT 0,
+"template" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:57:26,034 WARNING database DDL Query made to DB:
+create table "tabMilestone" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"reference_type" varchar(140),
+"reference_name" varchar(140),
+"track_field" varchar(140),
+"value" varchar(140),
+"milestone_tracker" varchar(140),
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:57:26,035 WARNING database DDL Query made to DB:
+CREATE INDEX IF NOT EXISTS "reference_type" ON "tabMilestone"("reference_type");
+2026-06-17 10:57:26,081 WARNING database DDL Query made to DB:
+CREATE INDEX IF NOT EXISTS "reference_type_reference_name_index" ON "public"."tabMilestone" ("reference_type", "reference_name")
+2026-06-17 10:57:26,186 WARNING database DDL Query made to DB:
+create table "tabAuto Repeat" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"reference_doctype" varchar(140),
+"reference_document" varchar(140),
+"submit_on_creation" smallint NOT NULL DEFAULT 0,
+"start_date" date,
+"end_date" date,
+"disabled" smallint NOT NULL DEFAULT 0,
+"frequency" varchar(140),
+"repeat_on_day" int NOT NULL DEFAULT 0,
+"repeat_on_last_day" smallint NOT NULL DEFAULT 0,
+"next_schedule_date" date,
+"generate_separate_documents_for_each_assignee" smallint NOT NULL DEFAULT 0,
+"notify_by_email" smallint NOT NULL DEFAULT 0,
+"recipients" text,
+"template" varchar(140),
+"subject" varchar(140),
+"message" text DEFAULT 'Please find attached {{ doc.doctype }} #{{ doc.name }}',
+"print_format" varchar(140),
+"status" varchar(140),
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:57:26,186 WARNING database DDL Query made to DB:
+CREATE INDEX IF NOT EXISTS "next_schedule_date" ON "tabAuto Repeat"("next_schedule_date");
+2026-06-17 10:57:26,272 WARNING database DDL Query made to DB:
+create table "tabAssignment Rule" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"document_type" varchar(140),
+"due_date_based_on" varchar(140),
+"priority" int NOT NULL DEFAULT 0,
+"disabled" smallint NOT NULL DEFAULT 0,
+"description" text DEFAULT 'Automatic Assignment',
+"assign_condition" text,
+"unassign_condition" text,
+"close_condition" text,
+"rule" varchar(140),
+"field" varchar(140),
+"last_user" varchar(140),
+"current_index" int NOT NULL DEFAULT 0,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:57:26,304 WARNING database DDL Query made to DB:
+create table "tabReminder" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"user" varchar(140),
+"remind_at" timestamp,
+"description" text,
+"reminder_doctype" varchar(140),
+"reminder_docname" varchar(140),
+"notified" smallint NOT NULL DEFAULT 0,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:57:26,304 WARNING database DDL Query made to DB:
+CREATE INDEX IF NOT EXISTS "user" ON "tabReminder"("user");CREATE INDEX IF NOT EXISTS "remind_at" ON "tabReminder"("remind_at");
+2026-06-17 10:57:26,337 WARNING database DDL Query made to DB:
+create table "tabAssignment Rule Day" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"day" varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140)
+			)
+2026-06-17 10:57:26,373 WARNING database DDL Query made to DB:
+create table "tabAssignment Rule User" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"user" varchar(140),
+"weight" int NOT NULL DEFAULT 1,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140)
+			)
+2026-06-17 10:57:26,413 WARNING database DDL Query made to DB:
+create table "tabAuto Repeat Day" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"day" varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140)
+			)
+2026-06-17 10:57:26,448 WARNING database DDL Query made to DB:
+create table "tabMilestone Tracker" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"document_type" varchar(140) UNIQUE,
+"track_field" varchar(140),
+"disabled" smallint NOT NULL DEFAULT 0,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:57:26,478 WARNING database DDL Query made to DB:
+create table "tabAuto Repeat User" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"user" varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140)
+			)
+2026-06-17 10:59:58,312 WARNING database DDL Query made to DB:
+create table "tabUrban Ward" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ward_name" varchar(140) UNIQUE,
+"district" varchar(140),
+"latitude_center" decimal(21,9) NOT NULL DEFAULT 0.0,
+"longitude_center" decimal(21,9) NOT NULL DEFAULT 0.0,
+"area" decimal(21,9) NOT NULL DEFAULT 0.0,
+"population" int NOT NULL DEFAULT 0,
+"geojson_boundary" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:59:58,442 WARNING database DDL Query made to DB:
+create table "tabUrban Tree" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"tree_code" varchar(140) UNIQUE,
+"species" varchar(140),
+"ward" varchar(140),
+"status" varchar(140) DEFAULT 'Healthy',
+"latitude" decimal(21,9) NOT NULL DEFAULT 0.0,
+"longitude" decimal(21,9) NOT NULL DEFAULT 0.0,
+"last_inspected" date,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:59:58,518 WARNING database DDL Query made to DB:
+create table "tabUrban Household" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"household_head" varchar(140) UNIQUE,
+"user_account" varchar(140),
+"member_count" int NOT NULL DEFAULT 0,
+"ward" varchar(140),
+"address" text,
+"latitude" decimal(21,9) NOT NULL DEFAULT 0.0,
+"longitude" decimal(21,9) NOT NULL DEFAULT 0.0,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 10:59:58,599 WARNING database DDL Query made to DB:
+create table "tabTree Incident" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"naming_series" varchar(140),
+"incident_title" varchar(140),
+"tree" varchar(140),
+"reporter" varchar(140),
+"ward" varchar(140),
+"status" varchar(140) DEFAULT 'Pending',
+"image" text,
+"description" text,
+"assigned_technician" varchar(140),
+"ai_is_hazardous" smallint NOT NULL DEFAULT 0,
+"ai_reason" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 11:16:56,218 WARNING database DDL Query made to DB:
+create table "tabKhu Vuc" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ma_khu_vuc" varchar(140) UNIQUE,
+"ten_khu_vuc" varchar(140),
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 11:16:56,580 WARNING database DDL Query made to DB:
+create table "tabTai Nguyen Ha Tang" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ma_tai_san" varchar(140) UNIQUE,
+"ten_tai_san" varchar(140),
+"khu_vuc" varchar(140),
+"loai_tai_san" varchar(140) DEFAULT 'Cây xanh',
+"loai_cay" varchar(140),
+"toa_do_gps" varchar(140),
+"trang_thai" varchar(140) DEFAULT 'Tốt',
+"chi_phi_bao_duong" decimal(21,9) NOT NULL DEFAULT 0.0,
+"ngay_lap_dat" date,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 11:16:56,646 WARNING database DDL Query made to DB:
+create table "tabTuyen Cay Xanh" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ma_tuyen" varchar(140) UNIQUE,
+"ten_tuyen" varchar(140),
+"khu_vuc" varchar(140),
+"polyline_json" text,
+"so_diem" int NOT NULL DEFAULT 0,
+"ghi_chu" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 11:16:56,715 WARNING database DDL Query made to DB:
+create table "tabBao Cao Van De" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"naming_series" varchar(140),
+"tieu_de" varchar(140),
+"khu_vuc" varchar(140),
+"vi_tri_gps" varchar(140),
+"mo_ta_chi_tiet" text,
+"hinh_anh_minh_hoa" text,
+"muc_do_uu_tien" varchar(140) DEFAULT 'Trung bình',
+"nguoi_bao_cao" varchar(140),
+"sdt_lien_he" varchar(140),
+"trang_thai" varchar(140) DEFAULT 'Mới',
+"loai_van_de" varchar(140) DEFAULT 'Sự cố cây xanh',
+"ai_is_hazardous" smallint NOT NULL DEFAULT 0,
+"ai_reason" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 11:17:37,384 WARNING database DDL Query made to DB:
+ALTER TABLE "tabBao Cao Van De" ADD COLUMN "tai_nguyen" varchar(140)
+2026-06-17 11:51:15,308 WARNING database DDL Query made to DB:
+create table "tabDevice Type" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_loai" varchar(140) UNIQUE,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 11:51:15,531 WARNING database DDL Query made to DB:
+create table "tabPower Device" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ma_thiet_bi" varchar(140) UNIQUE,
+"ten_thiet_bi" varchar(140),
+"loai_thiet_bi" varchar(140),
+"khu_vuc" varchar(140),
+"toa_do_gps" varchar(140),
+"trang_thai" varchar(140) DEFAULT 'Hoạt động tốt',
+"ngay_lap_dat" date,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 11:51:15,601 WARNING database DDL Query made to DB:
+create table "tabPower Incident" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"naming_series" varchar(140),
+"tieu_de" varchar(140),
+"thiet_bi" varchar(140),
+"khu_vuc" varchar(140),
+"vi_tri_gps" varchar(140),
+"mo_ta_chi_tiet" text,
+"hinh_anh" text,
+"muc_do_uu_tien" varchar(140) DEFAULT 'Trung bình',
+"trang_thai" varchar(140) DEFAULT 'Mới',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 11:51:15,682 WARNING database DDL Query made to DB:
+create table "tabWork Order" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"naming_series" varchar(140),
+"ten_cong_viec" varchar(140),
+"thiet_bi" varchar(140),
+"su_co" varchar(140),
+"nguoi_thuc_hien" varchar(140),
+"don_vi_thi_cong" varchar(140),
+"trang_thai" varchar(140) DEFAULT 'Chưa xử lý',
+"ngay_bat_dau" date,
+"ngay_hoan_thanh" date,
+"han_chot" date,
+"muc_do_uu_tien" varchar(140) DEFAULT 'Medium',
+"ket_qua_nghiem_thu" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 12:02:39,208 WARNING database DDL Query made to DB:
+ALTER TABLE "tabWork Order" ADD COLUMN "tree" varchar(140)
+2026-06-17 12:32:45,957 WARNING database DDL Query made to DB:
+create table "tabLoai Cay" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ma_loai_cay" varchar(140) UNIQUE,
+"ten_loai_cay" varchar(140),
+"nhom_cay" varchar(140) DEFAULT 'Cây bóng mát',
+"ten_khoa_hoc" varchar(140),
+"chieu_cao_tb" decimal(21,9) NOT NULL DEFAULT 0.0,
+"duong_kinh_tan_tb" decimal(21,9) NOT NULL DEFAULT 0.0,
+"dac_diem_sinh_truong" text,
+"dac_diem_re" text,
+"ghi_chu_rui_ro" text,
+"trang_thai_hoat_dong" smallint NOT NULL DEFAULT 1,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 12:32:46,066 WARNING database DDL Query made to DB:
+ALTER TABLE "tabTai Nguyen Ha Tang" ADD COLUMN "du_an" varchar(140), ADD COLUMN "tuyen_duong" varchar(140)
+2026-06-17 12:39:19,627 WARNING database DDL Query made to DB:
+ALTER TABLE "tabBao Cao Van De" ADD COLUMN "loai_su_co" varchar(140), ALTER COLUMN "muc_do_uu_tien" SET DEFAULT 'Bình thường'
+2026-06-17 12:46:16,389 WARNING database DDL Query made to DB:
+create table "tabMuc Do Su Co" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_muc_do" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 12:46:16,464 WARNING database DDL Query made to DB:
+create table "tabNguon Su Co" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_nguon" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 12:46:16,536 WARNING database DDL Query made to DB:
+create table "tabLoai Su Co" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_loai" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 12:56:52,174 WARNING database DDL Query made to DB:
+ALTER TABLE "tabBao Cao Van De" ADD COLUMN "nguon_su_co" varchar(140)
+2026-06-17 17:03:12,577 WARNING database DDL Query made to DB:
+ALTER TABLE "tabLoai Cay" ADD COLUMN "model_3d" text
+2026-06-17 17:03:12,679 WARNING database DDL Query made to DB:
+ALTER TABLE "tabLoai Cay" ADD COLUMN "scale_3d" decimal(21,9) NOT NULL DEFAULT 1.0
+2026-06-19 11:59:07,048 WARNING database DDL Query made to DB:
+create table "tabCong Vien" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ma_cong_vien" varchar(140) UNIQUE,
+"ten_cong_vien" varchar(140),
+"dien_tich" decimal(21,9) NOT NULL DEFAULT 0.0,
+"geojson_boundary" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-19 11:59:07,170 WARNING database DDL Query made to DB:
+ALTER TABLE "tabTai Nguyen Ha Tang" ADD COLUMN "cong_vien" varchar(140)
+2026-06-19 11:59:07,277 WARNING database DDL Query made to DB:
+ALTER TABLE "tabTuyen Cay Xanh" ADD COLUMN "geojson_data" text

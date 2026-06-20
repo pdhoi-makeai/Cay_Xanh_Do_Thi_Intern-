@@ -1,0 +1,16 @@
+{
+    "cay_xanh_do_thi": {
+        "is_repo": false,
+        "resolution": "not a repo",
+        "required": [],
+        "idx": 1,
+        "version": "0.0.1"
+    },
+    "smart_city": {
+        "is_repo": false,
+        "resolution": "not a repo",
+        "required": [],
+        "idx": 2,
+        "version": "0.0.1"
+    }
+}

@@ -1,0 +1,6 @@
+#!/home/user/cay_xanh_do_thi/be/v16-bench/env/bin/python
+import sys
+from charset_normalizer.cli import cli_detect
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(cli_detect())

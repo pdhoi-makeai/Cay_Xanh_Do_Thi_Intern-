@@ -1,0 +1,261 @@
+2026-06-17 13:07:06,945 WARNING database DDL Query made to DB:
+create table "tabLoai Kiem Tra" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_loai" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:07:07,093 WARNING database DDL Query made to DB:
+create table "tabTrang Thai Nghieng" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_trang_thai" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:07:07,147 WARNING database DDL Query made to DB:
+create table "tabTrang Thai Sau Benh" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_trang_thai" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:07:07,202 WARNING database DDL Query made to DB:
+create table "tabMuc An Toan" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_muc_do" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:07:07,257 WARNING database DDL Query made to DB:
+create table "tabTinh Trang Bo Phan" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_tinh_trang" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:07:07,312 WARNING database DDL Query made to DB:
+create table "tabNhom Cay" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_nhom" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:07:07,455 WARNING database DDL Query made to DB:
+create table "tabPhieu Kiem Tra" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ma_phieu" varchar(140) UNIQUE,
+"ngay_kt" date,
+"gio_kt" time(6),
+"loai_kt" varchar(140),
+"nguoi_kt" varchar(140),
+"an_toan" varchar(140),
+"trang_thai" varchar(140) DEFAULT 'Mới tiếp nhận',
+"de_xuat" varchar(140),
+"tai_nguyen" varchar(140),
+"trang_thai_ngieng" varchar(140),
+"trang_thai_sau_benh" varchar(140),
+"tinh_trang_bo_phan" varchar(140),
+"ghi_chu" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:13:31,447 WARNING database DDL Query made to DB:
+create table "tabLoai Ke Hoach" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_loai" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:13:31,602 WARNING database DDL Query made to DB:
+create table "tabMuc Uu Tien" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_muc_do" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:13:31,685 WARNING database DDL Query made to DB:
+create table "tabKe Hoach Cham Soc" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ma_kh" varchar(140) UNIQUE,
+"ten_ke_hoach" varchar(140),
+"loai_ke_hoach" varchar(140),
+"muc_uu_tien" varchar(140),
+"ngay_bat_dau" date,
+"trang_thai" varchar(140) DEFAULT 'Mới',
+"ghi_chu" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:17:42,006 WARNING database DDL Query made to DB:
+create table "tabLoai Hanh Dong" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_hanh_dong" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:17:42,165 WARNING database DDL Query made to DB:
+create table "tabNhat Ky Thi Cong" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ngay_ghi" date,
+"work_order" varchar(140),
+"nguoi_ghi" varchar(140),
+"noi_dung" text,
+"hinh_anh" text,
+"trang_thai_hoan_thanh" varchar(140) DEFAULT 'Đã hoàn thành',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:17:42,324 WARNING database DDL Query made to DB:
+ALTER TABLE "tabWork Order" ADD COLUMN "ke_hoach" varchar(140), ADD COLUMN "loai_cv" varchar(140)
+2026-06-17 13:36:41,333 WARNING database DDL Query made to DB:
+create table "tabKet Qua Nghiem Thu" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"ten_ket_qua" varchar(140) UNIQUE,
+"mo_ta" text,
+"trang_thai" varchar(140) DEFAULT 'Đang dùng',
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
+2026-06-17 13:36:41,606 WARNING database DDL Query made to DB:
+create table "tabBien Ban Nghiem Thu" (
+			name varchar(140) primary key,
+			creation timestamp(6),
+			modified timestamp(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus smallint not null default '0',
+			idx bigint not null default '0',
+			"naming_series" varchar(140),
+"phieu_cv" varchar(140),
+"ngay_nt" date,
+"nguoi_nt" varchar(140),
+"ket_qua" varchar(140),
+"lam_lai" varchar(140) DEFAULT 'Không',
+"ghi_chu" text,
+"_user_tags" text,
+"_comments" text,
+"_assign" text,
+"_liked_by" text
+			)
